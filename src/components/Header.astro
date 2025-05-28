@@ -1,0 +1,57 @@
+
+<header class="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-30">
+  <nav class="container mx-auto px-4 py-4" role="navigation" aria-label="Navegación principal">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+        </svg>
+        <h1 class="text-xl font-bold text-gray-900 dark:text-white">CiberAlerta</h1>
+      </div>
+      
+      <div class="hidden md:flex space-x-6">
+        <a href="/" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" aria-current="page">Inicio</a>
+        <a href="/amenazas" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Amenazas</a>
+        <a href="/proteccion" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Protección</a>
+        <a href="/privacidad" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacidad</a>
+        <a href="/contacto" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contacto</a>
+      </div>
+      
+      <button 
+        id="mobile-menu-button"
+        class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Abrir menú de navegación"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden mt-4 hidden">
+      <div class="flex flex-col space-y-2">
+        <a href="/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Inicio</a>
+        <a href="/amenazas" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Amenazas</a>
+        <a href="/proteccion" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Protección</a>
+        <a href="/privacidad" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Privacidad</a>
+        <a href="/contacto" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Contacto</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton?.addEventListener('click', () => {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
+      mobileMenu?.classList.toggle('hidden');
+    });
+  });
+</script>

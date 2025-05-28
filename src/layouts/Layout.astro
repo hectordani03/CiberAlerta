@@ -1,0 +1,346 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Sitio web especializado en ciberseguridad" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <link rel="stylesheet" href="/src/styles/global.css">
+  <title>{title}</title>
+  
+  <!-- Accessibility -->
+  <meta name="color-scheme" content="light dark" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=OpenDyslexic:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Dark mode initialization script (debe ir en el head para evitar flash) -->
+  <script is:inline>
+    // Detecta la preferencia del usuario inmediatamente
+    (function() {
+      const savedTheme = localStorage.getItem('darkMode');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === 'true' || (savedTheme === null && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+</head>
+<body class="font-sans antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+  <a href="#main-content" class="skip-link bg-blue-600 text-white p-2 absolute left-4 top-4 -translate-y-20 focus:translate-y-0 z-50 rounded transition-transform">Saltar al contenido principal</a>
+  
+  <!-- Accessibility Toolbar -->
+  <div id="accessibility-toolbar" class="fixed top-0 left-0 right-0 bg-gray-100 dark:bg-gray-800 text-white p-2 z-50 hidden shadow-lg">
+    <div class="container mx-auto flex flex-wrap gap-2 justify-center">
+      <button id="font-increase" class="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-3 py-1 rounded text-sm transition-colors" aria-label="Aumentar tamaño de fuente">A+</button>
+      <button id="font-decrease" class="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-3 py-1 rounded text-sm transition-colors" aria-label="Disminuir tamaño de fuente">A-</button>
+      <button id="font-reset" class="bg-gray-600 hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-400 px-3 py-1 rounded text-sm transition-colors" aria-label="Restablecer tamaño de fuente">Reset</button>
+      <select id="font-family" class="bg-gray-700 dark:bg-gray-600 text-white px-2 py-1 rounded text-sm transition-colors" aria-label="Cambiar tipo de fuente">
+        <option value="sans">Sans Serif</option>
+        <option value="serif">Serif</option>
+        <option value="mono">Monospace</option>
+        <option value="dyslexic">Dyslexic Friendly</option>
+      </select>
+      <button id="dark-mode-toggle" class="bg-yellow-600 hover:bg-yellow-700 dark:bg-yellow-500 dark:hover:bg-yellow-600 px-3 py-1 rounded text-sm transition-colors flex items-center gap-1" aria-label="Alternar modo oscuro">
+        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="dark:hidden">
+          <path fill="currentColor" d="M12 17q-2.075 0-3.537-1.463T7 12t1.463-3.537T12 7t3.538 1.463T17 12t-1.463 3.538T12 17M2 13q-.425 0-.712-.288T1 12t.288-.712T2 11h2q.425 0 .713.288T5 12t-.288.713T4 13zm18 0q-.425 0-.712-.288T19 12t.288-.712T20 11h2q.425 0 .713.288T23 12t-.288.713T22 13zm-8-8q-.425 0-.712-.288T11 4V2q0-.425.288-.712T12 1t.713.288T13 2v2q0 .425-.288.713T12 5m0 18q-.425 0-.712-.288T11 22v-2q0-.425.288-.712T12 19t.713.288T13 20v2q0 .425-.288.713T12 23M6 7.05L4.575 5.625q-.3-.3-.3-.712t.3-.713t.713-.3t.712.3L7.05 6q.275.275.275.7t-.275.7t-.7.275t-.7-.275M18 19.05L16.575 17.625q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l1.425 1.425q.3.3.3.713t-.3.712t-.712.3t-.713-.3M16.95 7.05q-.275-.275-.275-.7t.275-.7L18.375 4.225q.3-.3.713-.3t.712.3t.3.713t-.3.712L18.375 7.05q-.3.3-.712.3t-.713-.3M4.225 19.375q-.3-.3-.3-.712t.3-.713L5.65 16.525q.275-.275.7-.275t.7.275t.275.7t-.275.7l-1.425 1.425q-.3.3-.712.3t-.713-.3"/>
+        </svg>
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="hidden dark:block">
+          <path fill="currentColor" d="M12 21q-3.75 0-6.375-2.625T3 12t2.625-6.375T12 3q.35 0 .688.025t.662.075q-1.025.725-1.638 1.888T11.1 7.5q0 2.25 1.575 3.825T16.5 12.9q1.375 0 2.525-.613T20.9 10.65q.05.325.075.662T21 12q0 3.75-2.625 6.375T12 21"/>
+        </svg>
+      </button>
+      <button id="high-contrast" class="bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 px-3 py-1 rounded text-sm transition-colors" aria-label="Alto contraste">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+          <path fill="currentColor" fill-rule="evenodd" d="M4.35.577a7 7 0 0 1 9.381 4.085c.27.758.15 1.626-.315 2.282A2.53 2.53 0 0 1 11.37 8H9.5a1.5 1.5 0 0 0-.455 2.931c.55.205.935.702.972 1.286a1.43 1.43 0 0 1-1.01 1.524A6.8 6.8 0 0 1 7.129 14a7 7 0 0 1-3.636-1.021A7.06 7.06 0 0 1 .15 6.517a7.06 7.06 0 0 1 4.2-5.94M4.5 7a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m6-3a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0m-6 6.5a1 1 0 1 0 0-2a1 1 0 0 0 0 2" clip-rule="evenodd"/>
+        </svg>
+      </button>
+      <select id="cursor-size" class="bg-gray-700 dark:bg-gray-600 text-white px-2 py-1 rounded text-sm transition-colors" aria-label="Cambiar tamaño del cursor">
+        <option value="normal">Cursor Normal</option>
+        <option value="large">Cursor Grande</option>
+        <option value="extra-large">Cursor Extra Grande</option>
+      </select>
+      <button id="hide-svg" class="bg-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 px-3 py-1 rounded text-sm transition-colors" aria-label="Ocultar SVG">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2M4 12c0-4.42 3.58-8 8-8c1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12m8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8"/>
+        </svg>
+      </button>
+      <button id="remove-links" class="bg-red-600 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600 px-3 py-1 rounded text-sm transition-colors" aria-label="Remover estilos de enlaces">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+          <path fill="none" stroke="currentColor" stroke-dasharray="28" stroke-dashoffset="28" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 6l2 -2c1 -1 3 -1 4 0l1 1c1 1 1 3 0 4l-5 5c-1 1 -3 1 -4 0M11 18l-2 2c-1 1 -3 1 -4 0l-1 -1c-1 -1 -1 -3 0 -4l5 -5c1 -1 3 -1 4 0">
+            <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="28;0"/>
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <button 
+    id="accessibility-toggle" 
+    class="fixed top-18 right-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white p-3 rounded-full shadow-lg z-40 transition-colors"
+    aria-label="Mostrar herramientas de accesibilidad"
+  >
+    <svg class="text-2xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+      <path fill="currentColor" d="M256 112a56 56 0 1 1 56-56a56.06 56.06 0 0 1-56 56"/>
+      <path fill="currentColor" d="m432 112.8l-.45.12l-.42.13c-1 .28-2 .58-3 .89c-18.61 5.46-108.93 30.92-172.56 30.92c-59.13 0-141.28-22-167.56-29.47a74 74 0 0 0-8-2.58c-19-5-32 14.3-32 31.94c0 17.47 15.7 25.79 31.55 31.76v.28l95.22 29.74c9.73 3.73 12.33 7.54 13.6 10.84c4.13 10.59.83 31.56-.34 38.88l-5.8 45l-32.19 176.19q-.15.72-.27 1.47l-.23 1.27c-2.32 16.15 9.54 31.82 32 31.82c19.6 0 28.25-13.53 32-31.94s28-157.57 42-157.57s42.84 157.57 42.84 157.57c3.75 18.41 12.4 31.94 32 31.94c22.52 0 34.38-15.74 32-31.94a57 57 0 0 0-.76-4.06L329 301.27l-5.79-45c-4.19-26.21-.82-34.87.32-36.9a1 1 0 0 0 .08-.15c1.08-2 6-6.48 17.48-10.79l89.28-31.21a17 17 0 0 0 1.62-.52c16-6 32-14.3 32-31.93S451 107.81 432 112.8"/>
+    </svg>
+  </button>
+
+  <main id="main-content" class="min-h-screen">
+    <slot />
+  </main>
+
+  <script>
+    // Accessibility functionality
+    let currentFontSize = 1;
+    const maxFontSize = 3;
+    const minFontSize = 0.33;
+    
+    // Initialize accessibility features
+    document.addEventListener('DOMContentLoaded', function() {
+      const accessibilityToggle = document.getElementById('accessibility-toggle');
+      const accessibilityToolbar = document.getElementById('accessibility-toolbar');
+      
+      // Toggle accessibility toolbar
+      accessibilityToggle?.addEventListener('click', () => {
+        accessibilityToolbar?.classList.toggle('hidden');
+        const isVisible = !accessibilityToolbar?.classList.contains('hidden');
+        accessibilityToggle.setAttribute('aria-expanded', isVisible.toString());
+      });
+      
+      // Font size controls
+      document.getElementById('font-increase')?.addEventListener('click', () => {
+        if (currentFontSize < maxFontSize) {
+          currentFontSize += 0.2;
+          updateFontSize();
+        }
+      });
+      
+      document.getElementById('font-decrease')?.addEventListener('click', () => {
+        if (currentFontSize > minFontSize) {
+          currentFontSize -= 0.2;
+          updateFontSize();
+        }
+      });
+      
+      document.getElementById('font-reset')?.addEventListener('click', () => {
+        currentFontSize = 1;
+        updateFontSize();
+      });
+      
+      // Font family
+      document.getElementById('font-family')?.addEventListener('change', (e) => {
+        // Remove all font classes
+        document.body.classList.remove('font-sans', 'font-serif', 'font-mono', 'font-dyslexic');
+        // Add the selected font class
+        document.body.classList.add(`font-${e.target.value}`);
+        localStorage.setItem('fontFamily', e.target.value);
+      });
+      
+      // Dark mode toggle mejorado
+      document.getElementById('dark-mode-toggle')?.addEventListener('click', () => {
+        const html = document.documentElement;
+        const isDark = html.classList.contains('dark');
+        
+        if (isDark) {
+          html.classList.remove('dark');
+          localStorage.setItem('darkMode', 'false');
+        } else {
+          html.classList.add('dark');
+          localStorage.setItem('darkMode', 'true');
+        }
+        
+        updateDarkModeIcon(!isDark);
+      });
+      
+      // High contrast
+      document.getElementById('high-contrast')?.addEventListener('click', () => {
+        document.body.classList.toggle('high-contrast');
+        const isHighContrast = document.body.classList.contains('high-contrast');
+        localStorage.setItem('highContrast', isHighContrast.toString());
+      });
+      
+      // Cursor size
+      document.getElementById('cursor-size')?.addEventListener('change', (e) => {
+        // Remove all cursor classes
+        document.body.classList.remove('cursor-large', 'cursor-extra-large');
+        if (e.target.value !== 'normal') {
+          document.body.classList.add(`cursor-${e.target.value}`);
+        }
+        localStorage.setItem('cursorSize', e.target.value);
+      });
+      
+      // Hide SVG
+      document.getElementById('hide-svg')?.addEventListener('click', () => {
+        document.body.classList.toggle('hide-svg');
+        const hideSvg = document.body.classList.contains('hide-svg');
+        localStorage.setItem('hideSvg', hideSvg.toString());
+      });
+      
+      // Remove links styling
+      document.getElementById('remove-links')?.addEventListener('click', () => {
+        document.body.classList.toggle('no-links');
+        const noLinks = document.body.classList.contains('no-links');
+        localStorage.setItem('noLinks', noLinks.toString());
+      });
+      
+      // Escuchar cambios en la preferencia del sistema
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        const savedTheme = localStorage.getItem('darkMode');
+        // Solo aplicar la preferencia del sistema si no hay preferencia guardada
+        if (savedTheme === null) {
+          if (e.matches) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+          updateDarkModeIcon(e.matches);
+        }
+      });
+      
+      // Load saved preferences
+      loadAccessibilityPreferences();
+    });
+    
+    function updateFontSize() {
+      document.documentElement.style.fontSize = `${currentFontSize}rem`;
+      localStorage.setItem('fontSize', currentFontSize.toString());
+    }
+    
+    function updateDarkModeIcon(isDark) {
+      const sunIcon = document.getElementById('sun-icon');
+      const moonIcon = document.getElementById('moon-icon');
+      
+      if (isDark) {
+        sunIcon?.classList.add('hidden');
+        moonIcon?.classList.remove('hidden');
+      } else {
+        sunIcon?.classList.remove('hidden');
+        moonIcon?.classList.add('hidden');
+      }
+    }
+    
+    function loadAccessibilityPreferences() {
+      // Font size
+      const savedFontSize = localStorage.getItem('fontSize');
+      if (savedFontSize) {
+        currentFontSize = parseFloat(savedFontSize);
+        updateFontSize();
+      }
+      
+      // Font family
+      const savedFontFamily = localStorage.getItem('fontFamily');
+      if (savedFontFamily) {
+        document.body.classList.remove('font-sans', 'font-serif', 'font-mono', 'font-dyslexic');
+        document.body.classList.add(`font-${savedFontFamily}`);
+        const fontSelect = document.getElementById('font-family');
+        if (fontSelect) fontSelect.value = savedFontFamily;
+      }
+      
+      // Dark mode - ya se maneja en el script inline del head
+      const isDark = document.documentElement.classList.contains('dark');
+      updateDarkModeIcon(isDark);
+      
+      // High contrast
+      const savedHighContrast = localStorage.getItem('highContrast');
+      if (savedHighContrast === 'true') {
+        document.body.classList.add('high-contrast');
+      }
+      
+      // Cursor size
+      const savedCursorSize = localStorage.getItem('cursorSize');
+      if (savedCursorSize && savedCursorSize !== 'normal') {
+        document.body.classList.add(`cursor-${savedCursorSize}`);
+        const cursorSelect = document.getElementById('cursor-size');
+        if (cursorSelect) cursorSelect.value = savedCursorSize;
+      }
+      
+      // Hide SVG
+      const savedHideSvg = localStorage.getItem('hideSvg');
+      if (savedHideSvg === 'true') {
+        document.body.classList.add('hide-svg');
+      }
+      
+      // No links
+      const savedNoLinks = localStorage.getItem('noLinks');
+      if (savedNoLinks === 'true') {
+        document.body.classList.add('no-links');
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos adicionales para funcionalidades de accesibilidad */
+    .skip-link {
+      transform: translateY(-100%);
+    }
+    
+    .skip-link:focus {
+      transform: translateY(0%);
+    }
+    
+    /* High contrast mode - Solo aumenta contraste manteniendo colores */
+    .high-contrast {
+      filter: contrast(150%) brightness(1.1);
+    }
+    
+    /* Estilos más específicos para alto contraste si se necesita más control */
+    .high-contrast * {
+      text-shadow: 0 0 1px currentColor;
+    }
+    
+    .high-contrast a {
+      text-decoration: underline !important;
+      font-weight: 600 !important;
+    }
+    
+    .high-contrast button,
+    .high-contrast input,
+    .high-contrast select {
+      border: 2px solid currentColor !important;
+      box-shadow: 0 0 0 1px currentColor !important;
+    }
+    
+    /* Cursor sizes */
+    .cursor-large * {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="black" d="M2 2v28l7-7h21z"/></svg>'), auto !important;
+    }
+    
+    .cursor-extra-large * {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="black" d="M3 3v42l10.5-10.5h31.5z"/></svg>'), auto !important;
+    }
+    
+    /* Hide SVG */
+    .hide-svg svg {
+      display: none !important;
+    }
+    
+    /* Remove links styling */
+    .no-links a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+    
+    /* Font families adicionales */
+    .font-dyslexic {
+      font-family: 'OpenDyslexic', sans-serif;
+    }
+  </style>
+</body>
+</html>

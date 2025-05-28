@@ -1,0 +1,355 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Conociendo al Enemigo: Tipos de Ciberataques Comunes" description="Descubre los principales tipos de amenazas cibernéticas: malware, phishing, DDoS, ingeniería social y vulnerabilidades de día cero.">
+  <Header />
+  
+  <main id="main-content" class="min-h-screen">
+    <section class="bg-gradient-to-br from-red-100 via-orange-100 to-yellow-100 dark:from-red-900 dark:via-red-800 dark:to-orange-900 text-gray-900 dark:text-white py-20 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gray-200 bg-opacity-40 dark:bg-black dark:bg-opacity-20"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-8">
+        <svg class="w-24 h-24 mx-auto mb-6 text-red-500 dark:text-red-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+          <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        Conociendo al <span class="text-red-600 dark:text-red-300">Enemigo</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 leading-relaxed text-gray-700 dark:text-white">
+        Para defenderte eficazmente, primero debes conocer las amenazas. Descubre los tipos más comunes de ciberataques y cómo identificarlos antes de que sea demasiado tarde
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              Malware: El Software Malicioso
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              El malware es cualquier software diseñado para dañar, infiltrarse o tomar control de tu dispositivo sin tu consentimiento.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div class="space-y-8">
+              <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-xl border-l-4 border-red-500">
+                <h3 class="text-xl font-semibold text-red-800 dark:text-red-300 mb-3 flex gap-4"> <svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48"><path fill="#ffffff" fill-rule="evenodd" d="M24 11c0 3.867-3.133 7-7 7s-7-3.133-7-7s3.133-7 7-7s7 3.133 7 7M4 25.4c0-4.256 8.661-6.4 13-6.4c2.696 0 7.06.828 9.98 2.475A13.01 13.01 0 0 0 20.152 31H4zM30 23a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-1v2.07a7 7 0 0 1 3.192 1.324L38.586 26l-.293-.293a1 1 0 0 1 1.414-1.414l2 2a1 1 0 0 1-1.414 1.414L40 27.414l-1.394 1.394A7 7 0 0 1 39.93 32H42v-1a1 1 0 1 1 2 0v4a1 1 0 1 1-2 0v-1h-2.07a7 7 0 0 1-.922 2.594L41 38.586l.293-.293a1 1 0 0 1 1.414 1.414l-2 2a1 1 0 0 1-1.414-1.414l.293-.293l-1.848-1.847A7 7 0 0 1 34 39.929V42h1a1 1 0 1 1 0 2h-4a1 1 0 1 1 0-2h1v-2.07a7 7 0 0 1-3.192-1.324L27.414 40l.293.293a1 1 0 0 1-1.414 1.414l-2-2a1 1 0 0 1 1.414-1.414l.293.293l1.394-1.394A7 7 0 0 1 26.07 34H24v1a1 1 0 1 1-2 0v-4a1 1 0 1 1 2 0v1h2.07a7 7 0 0 1 1.324-3.192L26 27.414l-.293.293a1 1 0 0 1-1.414-1.414l2-2a1 1 0 0 1 1.414 1.414l-.293.293l1.394 1.394A7 7 0 0 1 32 26.07V24h-1a1 1 0 0 1-1-1" clip-rule="evenodd"/></svg>Virus</h3>
+                <p class="text-red-700 dark:text-red-400 mb-3">
+                  Se replica y se propaga infectando otros archivos y programas. Puede corromper o eliminar datos.
+                </p>
+                <div class="bg-red-100 dark:bg-red-900/40 p-3 rounded-lg">
+                  <strong class="text-red-800 dark:text-red-300">Ejemplo:</strong>
+                  <span class="text-red-700 dark:text-red-400"> Recibes un archivo adjunto que parece ser una factura, pero al abrirlo infecta todo tu sistema.</span>
+                </div>
+              </div>
+
+              <div class="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-xl border-l-4 border-orange-500">
+                <h3 class="text-xl font-semibold text-orange-800 dark:text-orange-300 mb-3 flex gap-4"><svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" d="M20 8v8l-3 1l-3.09-5.5c-.26-.46-.99-.23-.91.31L14 21L4 17l1.15-8.06A6.92 6.92 0 0 1 12 3h8l-1.58 2.37C19.36 5.88 20 6.86 20 8"/></svg>Troyanos</h3>
+                <p class="text-orange-700 dark:text-orange-400 mb-3">
+                  Se disfrazan como software legítimo pero contienen código malicioso que permite acceso remoto.
+                </p>
+                <div class="bg-orange-100 dark:bg-orange-900/40 p-3 rounded-lg">
+                  <strong class="text-orange-800 dark:text-orange-300">Ejemplo:</strong>
+                  <span class="text-orange-700 dark:text-orange-400"> Descargas un "acelerador de internet gratuito" que en realidad permite a los hackers controlar tu computadora.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-8">
+              <div class="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-xl border-l-4 border-purple-500">
+                <h3 class="text-xl font-semibold text-purple-800 dark:text-purple-300 mb-3 flex gap-4"><svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" d="M12 2C9.243 2 7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7c0-2.757-2.243-5-5-5M9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9zm4 10.723V20h-2v-2.277a1.993 1.993 0 0 1 .567-3.677A2 2 0 0 1 14 16a1.99 1.99 0 0 1-1 1.723"/></svg>Ransomware</h3>
+                <p class="text-purple-700 dark:text-purple-400 mb-3">
+                  Cifra tus archivos y exige un rescate para devolverte el acceso. Muy peligroso para empresas.
+                </p>
+                <div class="bg-purple-100 dark:bg-purple-900/40 p-3 rounded-lg">
+                  <strong class="text-purple-800 dark:text-purple-300">Ejemplo:</strong>
+                  <span class="text-purple-700 dark:text-purple-400"> Un día enciendes tu computadora y aparece un mensaje: "Tus archivos están encriptados. Paga $500 en Bitcoin para recuperarlos".</span>
+                </div>
+              </div>
+
+              <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border-l-4 border-gray-500">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-3 flex gap-4"><svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>Spyware</h3>
+                <p class="text-gray-700 dark:text-gray-400 mb-3">
+                  Recopila información sobre ti sin tu conocimiento: contraseñas, historial de navegación, datos bancarios.
+                </p>
+                <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
+                  <strong class="text-gray-800 dark:text-gray-300">Ejemplo:</strong>
+                  <span class="text-gray-700 dark:text-gray-400"> Notas que tu computadora está lenta y aparecen anuncios extraños. Un spyware está monitoreando todo lo que haces.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              Phishing: El Arte del Engaño Digital
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Los ataques de phishing utilizan correos, mensajes o sitios web falsos para robar tu información personal.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
+              <h3 class="text-2xl font-semibold text-blue-800 dark:text-blue-300 mb-6 flex gap-4"><svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a2 2 0 1 0 0-4a2 2 0 0 0 0 4m0 0v10c0 6-10 6-10 0v-4l2 2"/></svg>Phishing Tradicional</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-6">
+                Envío masivo de correos fraudulentos que parecen provenir de empresas legítimas como bancos o servicios online.
+              </p>
+              
+              <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800 mb-4">
+                <h4 class="font-semibold text-red-800 dark:text-red-300 mb-2 flex gap-4"><svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" fill-rule="evenodd" d="M5.312 10.762C8.23 5.587 9.689 3 12 3s3.77 2.587 6.688 7.762l.364.644c2.425 4.3 3.638 6.45 2.542 8.022S17.786 21 12.364 21h-.728c-5.422 0-8.134 0-9.23-1.572s.117-3.722 2.542-8.022zM12 7.25a.75.75 0 0 1 .75.75v5a.75.75 0 0 1-1.5 0V8a.75.75 0 0 1 .75-.75M12 17a1 1 0 1 0 0-2a1 1 0 0 0 0 2" clip-rule="evenodd"/></svg>Señales de Alerta:</h4>
+                <ul class="text-red-700 dark:text-red-400 space-y-1 text-sm">
+                  <li>• Urgencia extrema ("Tu cuenta será cerrada hoy")</li>
+                  <li>• Errores de ortografía y gramática</li>
+                  <li>• URLs sospechosas (amazonn.com en lugar de amazon.com)</li>
+                  <li>• Solicitud de información confidencial por correo</li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
+                <strong class="text-yellow-800 dark:text-yellow-300">Ejemplo Real:</strong>
+                <p class="text-yellow-700 dark:text-yellow-400 text-sm mt-1">
+                  "Estimado cliente, su cuenta de PayPal ha sido suspendida. Haga clic aquí inmediatamente para verificar su identidad y evitar el cierre permanente."
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
+              <h3 class="text-2xl font-semibold text-purple-800 dark:text-purple-300 mb-6 flex gap-4"><svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0"/><path d="M7 12a5 5 0 1 0 10 0a5 5 0 1 0-10 0"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/></g></svg>Spear Phishing</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-6">
+                Ataques dirigidos que utilizan información personal específica para parecer más creíbles y legítimos.
+              </p>
+              
+              <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800 mb-4">
+                <h4 class="font-semibold text-red-800 dark:text-red-300 mb-2 flex gap-4"><svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" d="M15.096 5.904a6.5 6.5 0 1 0-9.192 9.192a6.5 6.5 0 0 0 9.192-9.192M4.49 4.49a8.5 8.5 0 0 1 12.686 11.272l5.345 5.345l-1.414 1.414l-5.345-5.345A8.501 8.501 0 0 1 4.49 4.49"/></svg>Características:</h4>
+                <ul class="text-red-700 dark:text-red-400 space-y-1 text-sm">
+                  <li>• Uso de tu nombre real y datos personales</li>
+                  <li>• Referencias a tu trabajo o contactos</li>
+                  <li>• Parece provenir de alguien conocido</li>
+                  <li>• Muy personalizado y convincente</li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
+                <strong class="text-yellow-800 dark:text-yellow-300">Ejemplo Real:</strong>
+                <p class="text-yellow-700 dark:text-yellow-400 text-sm mt-1">
+                  "Hola María, soy Carlos de Recursos Humanos. Necesito que revises urgentemente este documento sobre tu evaluación anual. [enlace malicioso]"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            Ataques DDoS: Cuando el Tráfico se Vuelve un Arma
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">
+            Los ataques de Denegación de Servicio Distribuido (DDoS) sobrecargan un servidor o red con tráfico falso hasta que colapsa.
+          </p>
+
+          <div class="bg-gradient-to-r from-red-700 to-orange-500 text-white p-8 rounded-2xl mb-12">
+            <h3 class="text-2xl font-bold mb-4">¿Cómo Funciona un Ataque DDoS?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="text-5xl mb-2"><svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 640 512"><path fill="#ffffff" d="M320 0c17.7 0 32 14.3 32 32v64h120c39.8 0 72 32.2 72 72v272c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72h120V32c0-17.7 14.3-32 32-32M208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16zM264 256a40 40 0 1 0-80 0a40 40 0 1 0 80 0m152 40a40 40 0 1 0 0-80a40 40 0 1 0 0 80M48 224h16v192H48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48m544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-16V224z"/></svg></div>
+                <h4 class="font-semibold mb-2">1. Red de Bots</h4>
+                <p class="text-sm text-red-100">Los hackers controlan miles de dispositivos infectados</p>
+              </div>
+              <div class="text-center">
+                <div class="text-5xl mb-2"><svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="-7.5 -3.5 24 24"><path fill="#ffffff" d="M5.708 4.968h1.789a1.5 1.5 0 0 1 1.378 2.09l-3.96 9.243a1.049 1.049 0 0 1-2.012-.413v-6.92L1.45 8.923A1.5 1.5 0 0 1 0 7.423V1.5A1.5 1.5 0 0 1 1.5 0h2.708a1.5 1.5 0 0 1 1.5 1.5z"/></svg></div>
+                <h4 class="font-semibold mb-2">2. Ataque Coordinado</h4>
+                <p class="text-sm text-red-100">Todos los bots atacan el mismo objetivo simultáneamente</p>
+              </div>
+              <div class="text-center">
+                <div class="text-5xl mb-2"><svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 56 56"><path fill="#ffffff" d="M54.084 31.229C55.376 30.605 56 29.714 56 28.823s-.624-1.715-1.916-2.16L43.548 23.03l4.522-9.244c.245-.468.312-.958.312-1.381c0-1.247-.936-2.16-2.161-2.16c-.423 0-.913.066-1.38.311l-9.557 4.678l-4.99-10.67C29.76 3.385 28.891 2.783 28 2.783c-.869 0-1.738.602-2.272 1.782l-4.99 10.67l-9.556-4.678a3 3 0 0 0-1.38-.312c-1.226 0-2.184.914-2.184 2.161c0 .423.09.913.334 1.381l4.522 9.244l-10.558 3.631C.668 27.085 0 27.954 0 28.845c0 .869.646 1.76 1.916 2.384l10.113 4.833L6.57 47.623a3.14 3.14 0 0 0-.378 1.47c0 1.114.757 1.916 1.826 1.916c.446 0 .936-.156 1.448-.468l12.92-7.64l3.541 10.96c.424 1.202 1.226 1.826 2.072 1.826c.891 0 1.67-.624 2.072-1.827l3.564-10.96l12.92 7.641c.512.312 1.002.446 1.447.446c1.025 0 1.827-.758 1.827-1.871c0-.468-.134-.98-.38-1.493l-5.479-11.56Z"/></svg></div>
+                <h4 class="font-semibold mb-2">3. Colapso del Servicio</h4>
+                <p class="text-sm text-red-100">El servidor se sobrecarga y deja de funcionar</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-xl border border-yellow-200 dark:border-yellow-800">
+            <h4 class="text-xl font-semibold text-yellow-800 dark:text-yellow-300 mb-3 flex gap-4"><svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" d="M21 7h-6a1 1 0 0 0-1 1v3h-2V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1M8 6h2v2H8zM6 16H4v-2h2zm0-4H4v-2h2zm0-4H4V6h2zm4 8H8v-2h2zm0-4H8v-2h2zm9 4h-2v-2h2zm0-4h-2v-2h2z"/></svg> Impacto en las Empresas</h4>
+            <p class="text-yellow-700 dark:text-yellow-400 mb-4">
+              Un sitio web caído puede costar miles de dólares por hora en pérdida de ventas, además del daño a la reputación.
+            </p>
+            <div class="bg-yellow-100 dark:bg-yellow-900/40 p-3 rounded-lg">
+              <strong class="text-yellow-800 dark:text-yellow-300">Ejemplo:</strong>
+              <span class="text-yellow-700 dark:text-yellow-400"> En 2020, Amazon Web Services sufrió un ataque DDoS que afectó a miles de sitios web durante varias horas.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              Ingeniería Social: Manipulando la Confianza
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              La ingeniería social explota la psicología humana para obtener información confidencial sin usar tecnología.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
+              <div class="text-center mb-4">
+                <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span class="text-3xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/></svg></span>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Vishing</h3>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Llamadas telefónicas donde se hacen pasar por empresas legítimas para obtener información.
+              </p>
+              <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
+                <strong class="text-blue-800 dark:text-blue-300">Ejemplo:</strong>
+                <p class="text-blue-700 dark:text-blue-400 text-sm mt-1">
+                  "Hola, soy del banco. Detectamos actividad sospechosa. Por seguridad, necesito que confirme su número de tarjeta..."
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
+              <div class="text-center mb-4">
+                <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span class="text-3xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20"><path fill="#ffffff" d="M19.581 5.84a.8.8 0 0 0-.92-.73C16.919 5.388 12.835 7 10 7S3.081 5.388 1.339 5.11a.8.8 0 0 0-.92.729C.277 7.371 0 11.45 0 12.068c0 .83 3.472 2.732 6 2.732c2.452 0 2.95-2.732 4-2.732s1.548 2.732 4 2.732c2.528 0 6-1.902 6-2.732c0-.618-.277-4.697-.419-6.228M7.66 10.72c-.353.318-1.335 1.07-2.531.835S3.21 10.232 2.963 9.797a.26.26 0 0 1 .044-.317c.353-.318 1.335-1.07 2.532-.835c1.196.235 1.919 1.323 2.166 1.758a.26.26 0 0 1-.045.317m9.377-.923c-.246.436-.969 1.523-2.166 1.758c-1.196.235-2.179-.517-2.531-.835a.26.26 0 0 1-.045-.317c.246-.436.969-1.523 2.166-1.758c1.196-.235 2.179.517 2.531.835a.26.26 0 0 1 .045.317"/></svg></span>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Pretexting</h3>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Crear un escenario falso para establecer confianza y obtener información confidencial.
+              </p>
+              <div class="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
+                <strong class="text-green-800 dark:text-green-300">Ejemplo:</strong>
+                <p class="text-green-700 dark:text-green-400 text-sm mt-1">
+                  Se hacen pasar por técnicos de IT que necesitan tu contraseña para "actualizar el sistema de seguridad".
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
+              <div class="text-center mb-4">
+                <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span class="text-3xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" d="M9.06 1.93C7.17 1.92 5.33 3.74 6.17 6H3a2 2 0 0 0-2 2v2a1 1 0 0 0 1 1h9V8h2v3h9a1 1 0 0 0 1-1V8a2 2 0 0 0-2-2h-3.17C19 2.73 14.6.42 12.57 3.24L12 4l-.57-.78c-.63-.89-1.5-1.28-2.37-1.29M9 4c.89 0 1.34 1.08.71 1.71S8 5.89 8 5a1 1 0 0 1 1-1m6 0c.89 0 1.34 1.08.71 1.71S14 5.89 14 5a1 1 0 0 1 1-1M2 12v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8h-9v8h-2v-8z"/></svg></span>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Baiting</h3>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Ofrecer algo atractivo (como un USB "perdido") que contiene malware.
+              </p>
+              <div class="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">
+                <strong class="text-purple-800 dark:text-purple-300">Ejemplo:</strong>
+                <p class="text-purple-700 dark:text-purple-400 text-sm mt-1">
+                  Dejan USBs con etiquetas como "Nómina Confidencial" en el estacionamiento de tu empresa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            Amenazas de Día Cero: Lo Desconocido es Peligroso
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">
+            Las vulnerabilidades de día cero son fallas de seguridad desconocidas que los hackers explotan antes de que exista una solución.
+          </p>
+
+          <div class="bg-gradient-to-br from-gray-800 to-black text-white p-8 rounded-2xl mb-12">
+            <h3 class="text-2xl font-bold mb-6">El Ciclo de una Vulnerabilidad de Día Cero</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div class="text-center">
+                <div class="text-4xl mb-2"><svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14"/></svg></div>
+                <h4 class="font-semibold mb-2">Descubrimiento</h4>
+                <p class="text-sm text-gray-300">Un hacker encuentra una vulnerabilidad desconocida</p>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl mb-2"><svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" d="m7.048 13.406l3.535 3.536l-1.413 1.414l1.415 1.415l-1.414 1.414l-2.475-2.475l-2.829 2.829l-1.414-1.414l2.829-2.83l-2.475-2.474l1.414-1.414l1.414 1.413zM3 3l3.546.003l11.817 11.818l1.415-1.414l1.415 1.414l-2.475 2.475l2.828 2.829l-1.414 1.414l-2.829-2.829l-2.474 2.475l-1.415-1.414l1.414-1.415L3.002 6.531zm14.457 0L21 3.003l.002 3.523l-4.053 4.052l-3.536-3.535z"/></svg></div>
+                <h4 class="font-semibold mb-2">Explotación</h4>
+                <p class="text-sm text-gray-300">La usa para atacar antes de que sea detectada</p>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl mb-2"><svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024"><path fill="#ffffff" d="M512 244c176.18 0 319 142.82 319 319v233a32 32 0 0 1-32 32H225a32 32 0 0 1-32-32V563c0-176.18 142.82-319 319-319M484 68h56a8 8 0 0 1 8 8v96a8 8 0 0 1-8 8h-56a8 8 0 0 1-8-8V76a8 8 0 0 1 8-8M177.25 191.66a8 8 0 0 1 11.32 0l67.88 67.88a8 8 0 0 1 0 11.31l-39.6 39.6a8 8 0 0 1-11.31 0l-67.88-67.88a8 8 0 0 1 0-11.31l39.6-39.6zm669.6 0l39.6 39.6a8 8 0 0 1 0 11.3l-67.88 67.9a8 8 0 0 1-11.32 0l-39.6-39.6a8 8 0 0 1 0-11.32l67.89-67.88a8 8 0 0 1 11.31 0M192 892h640a32 32 0 0 1 32 32v24a8 8 0 0 1-8 8H168a8 8 0 0 1-8-8v-24a32 32 0 0 1 32-32m148-317v253h64V575z"/></svg></div>
+                <h4 class="font-semibred mb-2">Detección</h4>
+                <p class="text-sm text-gray-300">Los expertos descubren el ataque</p>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl mb-2"><svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" d="M12 22q-3.475-.875-5.738-3.988T4 11.1V5l8-3l8 3v6.1q0 3.8-2.262 6.913T12 22"/></svg></div>
+                <h4 class="font-semibold mb-2">Parche</h4>
+                <p class="text-sm text-gray-300">Se desarrolla y distribuye una solución</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-xl border border-red-200 dark:border-red-800">
+            <h4 class="text-xl font-semibold text-red-800 dark:text-red-300 mb-3"><svg class="text-4xl mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024"><path fill="#ffffff" d="M512 244c176.18 0 319 142.82 319 319v233a32 32 0 0 1-32 32H225a32 32 0 0 1-32-32V563c0-176.18 142.82-319 319-319M484 68h56a8 8 0 0 1 8 8v96a8 8 0 0 1-8 8h-56a8 8 0 0 1-8-8V76a8 8 0 0 1 8-8M177.25 191.66a8 8 0 0 1 11.32 0l67.88 67.88a8 8 0 0 1 0 11.31l-39.6 39.6a8 8 0 0 1-11.31 0l-67.88-67.88a8 8 0 0 1 0-11.31l39.6-39.6zm669.6 0l39.6 39.6a8 8 0 0 1 0 11.3l-67.88 67.9a8 8 0 0 1-11.32 0l-39.6-39.6a8 8 0 0 1 0-11.32l67.89-67.88a8 8 0 0 1 11.31 0M192 892h640a32 32 0 0 1 32 32v24a8 8 0 0 1-8 8H168a8 8 0 0 1-8-8v-24a32 32 0 0 1 32-32m148-317v253h64V575z"/></svg> ¿Por qué Son Tan Peligrosas?</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <div>
+                <h5 class="font-semibold text-red-700 dark:text-red-400 mb-2">Para las Empresas:</h5>
+                <ul class="text-red-600 dark:text-red-400 space-y-1 text-sm">
+                  <li>• Imposibles de detectar con antivirus tradicionales</li>
+                  <li>• Pueden causar brechas masivas de datos</li>
+                  <li>• Tiempo de exposición prolongado</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-semibold text-red-700 dark:text-red-400 mb-2">Para los Usuarios:</h5>
+                <ul class="text-red-600 dark:text-red-400 space-y-1 text-sm">
+                  <li>• Robo de identidad sin previo aviso</li>
+                  <li>• Acceso completo a dispositivos personales</li>
+                  <li>• Difícil de prevenir completamente</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-red-700 to-orange-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ahora que Conoces las Amenazas...
+        </h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+          Es hora de aprender cómo protegerte. Descubre las herramientas y estrategias que necesitas para mantener tu información segura.
+        </p>
+        <a href="/proteccion" class="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-colors focus:outline-none focus:ring-2 focus:ring-white">
+          Aprende a Protegerte →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

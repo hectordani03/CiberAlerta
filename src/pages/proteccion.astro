@@ -1,0 +1,182 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout title="Tu Armadura Digital: Herramientas y Estrategias para Protegerte" description="Descubre las mejores herramientas y estrategias de ciberseguridad: contraseñas seguras, 2FA, antivirus, VPN y más.">
+  <Header />
+  
+  <main id="main-content" class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-green-100 via-emerald-100 to-teal-100 dark:from-green-900 dark:via-emerald-800 dark:to-teal-900 text-gray-900 dark:text-white py-20 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gray-200 bg-opacity-40 dark:bg-black dark:bg-opacity-20"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-8">
+        <svg class="w-24 h-24 mx-auto mb-6 text-green-600 dark:text-green-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+          <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        Tu <span class="text-green-700 dark:text-green-300">Armadura Digital</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 leading-relaxed text-gray-700 dark:text-green-100">
+        La mejor defensa es una buena protección. Descubre las herramientas y estrategias esenciales que todo usuario digital debe conocer para mantenerse seguro en línea.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- Password Management Section -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              Contraseñas: Tu Primera Línea de Defensa
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Una contraseña fuerte es como una cerradura de alta seguridad. Aprende a crear y gestionar contraseñas que realmente protejan tus cuentas.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div class="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 p-8 rounded-2xl">
+              <h3 class="text-2xl font-bold text-red-800 dark:text-red-300 mb-6">❌ Contraseñas Débiles</h3>
+              <div class="space-y-4">
+              <div class="space-y-4">
+                <div class="flex items-start space-x-3">
+                  <span class="text-red-500">✖</span>
+                  <p class="text-red-700 dark:text-red-200">Usar información personal (cumpleaños, nombres de mascotas)</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="text-red-500">✖</span>
+                  <p class="text-red-700 dark:text-red-200">Contraseñas cortas (menos de 12 caracteres)</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="text-red-500">✖</span>
+                  <p class="text-red-700 dark:text-red-200">Reutilizar la misma contraseña en múltiples sitios</p>
+                </div>
+                <div class="mt-6 p-4 bg-red-100 dark:bg-red-900/30 rounded-lg">
+                  <p class="text-sm text-red-700 dark:text-red-300">💡 <strong>Dato importante:</strong> Un hacker puede probar 100 millones de contraseñas por segundo. ¡Tu "Password123" no es seguro!</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-8 rounded-2xl">
+              <h3 class="text-2xl font-bold text-green-800 dark:text-green-300 mb-6">✅ Contraseñas Seguras</h3>
+              <div class="space-y-4">
+                <div class="flex items-start space-x-3">
+                  <span class="text-green-500">✔</span>
+                  <p class="text-green-700 dark:text-green-200">Usar frases largas (ej: "CaféConGalletas$2024")</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="text-green-500">✔</span>
+                  <p class="text-green-700 dark:text-green-200">Combinar mayúsculas, números y símbolos</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="text-green-500">✔</span>
+                  <p class="text-green-700 dark:text-green-200">Usar un gestor de contraseñas</p>
+                </div>
+                <div class="mt-6 p-4 bg-green-100 dark:bg-green-900/30 rounded-lg">
+                  <p class="text-sm text-green-700 dark:text-green-300">🔒 <strong>Recomendación:</strong> Usa un password manager como <a href="https://bitwarden.com" target="_blank" class="underline hover:text-green-900 dark:hover:text-green-100">Bitwarden</a> (gratuito y open-source)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Gestores de Contraseñas Recomendados</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-16 h-16 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-semibold mb-2">Bitwarden</h4>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Open-source y gratuito, ideal para usuarios técnicos</p>
+                <a href="https://bitwarden.com" class="text-green-600 dark:text-green-400 hover:underline">Visitar sitio</a>
+              </div>
+
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-semibold mb-2">1Password</h4>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Excelente interfaz y funciones avanzadas</p>
+                <a href="https://1password.com" class="text-blue-600 dark:text-blue-400 hover:underline">Visitar sitio</a>
+              </div>
+
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-semibold mb-2">KeePass</h4>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Auto-alojado, control total de tus datos</p>
+                <a href="https://keepass.info" class="text-purple-600 dark:text-purple-400 hover:underline">Visitar sitio</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            Autenticación en Dos Pasos (2FA)
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">
+            Agrega una capa extra de seguridad. Incluso si roban tu contraseña, necesitarán este segundo factor para acceder.
+          </p>
+          <div class="grid md:grid-cols-2 gap-8 text-left">
+            <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-md">
+              <h3 class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 flex gap-4"><svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><rect width="12.5" height="18.5" x="5.75" y="2.75" rx="3"/><path d="M11 17.75h2"/></g></svg>Aplicaciones de Autenticación</h3>
+              <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                <li class="flex items-center space-x-2">
+                  <span class="text-green-500">✔</span>
+                  <span>Google Authenticator</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-green-500">✔</span>
+                  <span>Authy (copias de seguridad en la nube)</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-green-500">✔</span>
+                  <span>Microsoft Authenticator</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-md">
+              <h3 class="text-xl font-bold mb-4 text-purple-600 dark:text-purple-400 flex gap-4"><svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" fill-rule="evenodd" d="M8 9a7 7 0 1 1 5.562 6.852L12 17.414a2 2 0 0 1-1.414.586H10a2 2 0 0 1-2 2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-2.586A2 2 0 0 1 2.586 16l5.562-5.562A7 7 0 0 1 8 9m7-3a1 1 0 1 0 0 2a1 1 0 0 1 1 1a1 1 0 1 0 2 0a3 3 0 0 0-3-3" clip-rule="evenodd"/></svg>Llaves de Seguridad Físicas</h3>
+              <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                <li class="flex items-center space-x-2">
+                  <span class="text-green-500">✔</span>
+                  <span>YubiKey (alta resistencia física)</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-green-500">✔</span>
+                  <span>Nitrokey (open-source)</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-green-500">✔</span>
+                  <span>Google Titan Key</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-12 bg-yellow-100 dark:bg-yellow-900/20 p-6 rounded-xl max-w-2xl mx-auto">
+            <p class="text-yellow-800 dark:text-yellow-200 flex gap-4"><svg class="text-3xl" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ffffff" fill-rule="evenodd" d="M5.312 10.762C8.23 5.587 9.689 3 12 3s3.77 2.587 6.688 7.762l.364.644c2.425 4.3 3.638 6.45 2.542 8.022S17.786 21 12.364 21h-.728c-5.422 0-8.134 0-9.23-1.572s.117-3.722 2.542-8.022zM12 7.25a.75.75 0 0 1 .75.75v5a.75.75 0 0 1-1.5 0V8a.75.75 0 0 1 .75-.75M12 17a1 1 0 1 0 0-2a1 1 0 0 0 0 2" clip-rule="evenodd"/></svg><strong>Importante:</strong> Evita el 2FA por SMS. Los códigos pueden ser interceptados mediante SIM swapping.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

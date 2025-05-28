@@ -1,0 +1,382 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout title="Mantente Informado: Noticias, Recursos y Conexión" description="Actualizaciones de ciberseguridad, recursos educativos y canales de contacto. Tu ventana al mundo de la protección digital.">
+  <Header />
+  
+  <main id="main-content" class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-cyan-100 via-sky-100 to-blue-100 dark:from-cyan-900 dark:via-sky-800 dark:to-blue-900 text-gray-900 dark:text-white py-20 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gray-200 bg-opacity-40 dark:bg-black dark:bg-opacity-20"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-8">
+        <svg class="w-24 h-24 mx-auto mb-6 text-cyan-600 dark:text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+        </svg>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        Mantente <span class="text-cyan-700 dark:text-cyan-300">Informado</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 leading-relaxed text-gray-700 dark:text-cyan-100">
+        Actualizaciones en tiempo real, recursos esenciales y conexión directa con expertos en ciberseguridad
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Noticias Recientes -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              Últimas Noticias en Ciberseguridad
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Información actualizada diariamente de fuentes confiables
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <article class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-shadow">
+              <time class="text-sm text-cyan-600 dark:text-cyan-400">15 Oct 2023</time>
+              <h3 class="text-xl font-semibold mt-4 mb-2">Nuevo Ransomware ataca hospitales</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">Ataque coordinado en 12 países exige pagos en criptomonedas</p>
+              <a href="#" class="text-cyan-600 dark:text-cyan-400 hover:underline">Leer más →</a>
+            </article>
+
+            <article class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-shadow">
+              <time class="text-sm text-cyan-600 dark:text-cyan-400">14 Oct 2023</time>
+              <h3 class="text-xl font-semibold mt-4 mb-2">Actualización crítica de Windows</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">Microsoft parchea vulnerabilidad zero-day explotada activamente</p>
+              <a href="#" class="text-cyan-600 dark:text-cyan-400 hover:underline">Leer más →</a>
+            </article>
+
+            <article class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-shadow">
+              <time class="text-sm text-cyan-600 dark:text-cyan-400">13 Oct 2023</time>
+              <h3 class="text-xl font-semibold mt-4 mb-2">Nueva ley de protección de datos</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">UE anuncia regulaciones más estrictas para IA y biometría</p>
+              <a href="#" class="text-cyan-600 dark:text-cyan-400 hover:underline">Leer más →</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recursos y Cursos -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12">
+            <!-- Recursos Adicionales -->
+            <div>
+              <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Recursos Esenciales</h2>
+              
+              <div class="space-y-8">
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-xl">
+                  <div class="flex items-center mb-4">
+                    <svg class="w-6 h-6 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                    </svg>
+                    <h3 class="text-xl font-semibold">Blogs Especializados</h3>
+                  </div>
+                  <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                    <li><a href="https://krebsonsecurity.com" class="hover:underline">Krebs on Security</a></li>
+                    <li><a href="https://thehackernews.com" class="hover:underline">The Hacker News</a></li>
+                    <li><a href="https://www.darkreading.com" class="hover:underline">Dark Reading</a></li>
+                  </ul>
+                </div>
+
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-xl">
+                  <div class="flex items-center mb-4">
+                    <svg class="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                    </svg>
+                    <h3 class="text-xl font-semibold">Podcasts</h3>
+                  </div>
+                  <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                    <li>Darknet Diaries</li>
+                    <li>CyberWire Daily</li>
+                    <li>Smashing Security</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cursos y Certificaciones -->
+            <div>
+              <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Formación Profesional</h2>
+              
+              <div class="space-y-6">
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-xl">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-400 px-3 py-1 rounded-full text-sm">Gratuito</span>
+                    <span class="text-sm text-gray-500">Coursera</span>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">Introducción a la Ciberseguridad</h3>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">Curso básico de IBM para principiantes</p>
+                  <a href="#" class="text-cyan-600 dark:text-cyan-400 hover:underline">Ver curso →</a>
+                </div>
+
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-xl">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="bg-purple-100 dark:bg-purple-900/20 text-purple-800 dark:text-purple-400 px-3 py-1 rounded-full text-sm">Certificación</span>
+                    <span class="text-sm text-gray-500">CompTIA</span>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">Security+</h3>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">Fundamentos esenciales de seguridad IT</p>
+                  <a href="#" class="text-cyan-600 dark:text-cyan-400 hover:underline">Más información →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto y Redes -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              Contacto Directo
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300">
+              ¿Tienes preguntas, sugerencias o necesitas asistencia? Escríbenos
+            </p>
+          </div>
+
+          <!-- Formulario de Contacto -->
+          <form id="contact-form" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2">Nombre *</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required
+                  maxlength="100"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
+                  placeholder="Tu nombre completo"
+                >
+              </div>
+              <div>
+                <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
+                  placeholder="tu@email.com"
+                >
+              </div>
+            </div>
+
+            <div>
+              <label for="subject" class="block text-gray-700 dark:text-gray-300 mb-2">Asunto *</label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                required
+                maxlength="200"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
+                placeholder="¿De qué quieres hablar?"
+              >
+            </div>
+
+            <div>
+              <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2">Mensaje *</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required
+                maxlength="2000"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors resize-vertical"
+                placeholder="Cuéntanos en qué podemos ayudarte..."
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-6 rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              Enviar Mensaje
+            </button>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400 text-center">
+              * Campos obligatorios. Nos pondremos en contacto contigo lo antes posible.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<!-- EmailJS SDK -->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "hI6UVJJnpK_0_Hpg2",
+      });
+   })();
+</script>
+
+
+<script define:vars={{ 
+  serviceId: import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
+}}>
+document.addEventListener('DOMContentLoaded', function() {
+  // Inicializar EmailJS con la clave pública
+  if (publicKey) {
+    emailjs.init(publicKey);
+  }
+
+  const contactForm = document.getElementById('contact-form');
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const originalButtonText = submitButton.textContent;
+
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Verificar que las credenciales de EmailJS estén configuradas
+    if (!serviceId || !templateId || !publicKey) {
+      showNotification('Error de configuración: Las credenciales de EmailJS no están configuradas correctamente.', 'error');
+      return;
+    }
+
+    // Cambiar estado del botón
+    submitButton.disabled = true;
+    submitButton.innerHTML = `
+      <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>
+      Enviando...
+    `;
+
+    try {
+      // Obtener datos del formulario
+      const formData = new FormData(contactForm);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const subject = formData.get('subject');
+      const message = formData.get('message');
+
+      // Preparar los parámetros para EmailJS
+      const templateParams = {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message,
+        to_email: 'hmartinez10@ucol.mx' // Email de destino
+      };
+
+      // Enviar email usando EmailJS
+      const result = await emailjs.send(serviceId, templateId, templateParams);
+      
+      if (result.status === 200) {
+        // Mostrar mensaje de éxito
+        showNotification('¡Mensaje enviado correctamente! Te contactaremos pronto.', 'success');
+        
+        // Limpiar formulario
+        contactForm.reset();
+      } else {
+        throw new Error('Error en el envío');
+      }
+
+    } catch (error) {
+      console.error('Error al enviar email:', error);
+      
+      let errorMessage = 'Error al enviar el mensaje. ';
+      
+      if (error.text) {
+        // Error específico de EmailJS
+        if (error.text.includes('Invalid')) {
+          errorMessage += 'Configuración inválida. Verifica las credenciales de EmailJS.';
+        } else if (error.text.includes('limit')) {
+          errorMessage += 'Has alcanzado el límite de envío. Inténtalo más tarde.';
+        } else {
+          errorMessage += 'Error del servicio de email.';
+        }
+      } else {
+        errorMessage += 'Verifica tu conexión a internet e inténtalo de nuevo.';
+      }
+      
+      showNotification(errorMessage, 'error');
+    } finally {
+      // Restaurar botón
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
+  });
+
+  // Función para mostrar notificaciones
+  function showNotification(message, type) {
+    // Eliminar notificación anterior si existe
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+      existingNotification.remove();
+    }
+
+    // Crear nueva notificación
+    const notification = document.createElement('div');
+    notification.className = `notification fixed top-4 right-4 max-w-md p-4 rounded-lg shadow-lg z-50 transform transition-all duration-300 translate-x-full`;
+    
+    if (type === 'success') {
+      notification.classList.add('bg-green-500', 'text-white');
+      notification.innerHTML = `
+        <div class="flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>${message}</span>
+        </div>
+      `;
+    } else {
+      notification.classList.add('bg-red-500', 'text-white');
+      notification.innerHTML = `
+        <div class="flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+          <span>${message}</span>
+        </div>
+      `;
+    }
+
+    document.body.appendChild(notification);
+
+    // Animar entrada
+    setTimeout(() => {
+      notification.classList.remove('translate-x-full');
+    }, 100);
+
+    // Auto eliminar después de 5 segundos
+    setTimeout(() => {
+      notification.classList.add('translate-x-full');
+      setTimeout(() => {
+        if (notification.parentNode) {
+          notification.remove();
+        }
+      }, 300);
+    }, 5000);
+  }
+});
+</script>
