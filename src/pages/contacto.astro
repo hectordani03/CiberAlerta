@@ -205,6 +205,9 @@ import Footer from '../components/Footer.astro';
               ></textarea>
             </div>
 
+          <!-- HONEYPOT -->
+            <input type="checkbox" name="bot-trap" style="display: none;" tabindex="-1" autocomplete="off">            
+
             <button 
               type="submit" 
               class="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-6 rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
@@ -213,7 +216,8 @@ import Footer from '../components/Footer.astro';
             </button>
 
             <p class="text-sm text-gray-500 dark:text-gray-400 text-center">
-              * Campos obligatorios. Nos pondremos en contacto contigo lo antes posible.
+              Advertencia: La información se enviará por correo sin cifrado de extremo a extremo. 
+  No incluya datos sensibles (contraseñas, números de tarjetas, etc.).
             </p>
           </form>
         </div>
@@ -247,6 +251,10 @@ document.addEventListener('DOMContentLoaded', function() {
   if (publicKey) {
     emailjs.init(publicKey);
   }
+  // script de validación
+if (document.querySelector('input[name="bot-trap"]').checked) {
+  return; // Es un bot, no envíes
+}
 
   const contactForm = document.getElementById('contact-form');
   const submitButton = contactForm.querySelector('button[type="submit"]');
